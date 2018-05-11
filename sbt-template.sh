@@ -1,6 +1,6 @@
 #!/bin/sh
-#description   	: Creates a skeleton sbt project.
-#author		    : jonjack
+#description    : Creates a skeleton sbt project.
+#author         : jonjack
 #location       : https://github.com/jonjack/sbtils
 
 SCALA_VERSION="2.12.6"
@@ -24,7 +24,7 @@ fi
 if [ $PROJECT_DIR == "." ] ;then
     echo "Project will take name of current directory -> " $PROJECT_NAME
 else
-	echo "Creating SBT project in" $PROJECT_DIR
+    echo "Creating SBT project in" $PROJECT_DIR
 fi
 
 mkdir -p $PROJECT_DIR/src/main/scala
