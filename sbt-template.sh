@@ -1,7 +1,10 @@
 #!/bin/sh
+#description   	: Creates a skeleton sbt project.
+#author		    : jonjack
+#location       : https://github.com/jonjack/sbtils
 
-VERSION="0.1-SNAPSHOT"
-SCALA_VERSION="2.12.3"
+SCALA_VERSION="2.12.6"
+PROJECT_VERSION="0.1-SNAPSHOT"
 
 echo "Do you wish to use the current directory for the project root? (y/n)?"
 echo "Note: If (n) then the project will be created in a sub-directory of the current one."
@@ -31,7 +34,7 @@ mkdir -p $PROJECT_DIR/src/test/scala
 #echo 'object Hi { def main(args: Array[String]) = println("Hi!") }' > $PROJECT_DIR/src/main/scala/hello.scala
 
 # Create Build definition
-echo 'name := "'$PROJECT_NAME'"\n\nversion := "'$VERSION'"\n\nscalaVersion := "'$SCALA_VERSION'"' >> $PROJECT_DIR/build.sbt
+echo 'name := "'$PROJECT_NAME'"\n\nversion := "'$PROJECT_VERSION'"\n\nscalaVersion := "'$SCALA_VERSION'"' >> $PROJECT_DIR/build.sbt
 
 # Create plugins.sbt
 mkdir -p $PROJECT_DIR/project
